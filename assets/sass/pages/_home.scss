@@ -38,25 +38,40 @@
 
         p {
             text-align: right;
-            padding: 0;
+            padding-top: 5px;
         }
     }
 }
 
 .show-info {
-    @include flex(center, center, column);
+    @include flex(flex-start, flex-start, column);
     width: 100vw;
     height: 920px;
+    margin: 55px 120px 120px 120px;
 
     ul {
         @include flex();
+        margin-bottom: 28px;
+
+        li {
+            color: $dark;
+            font: {
+                size: 23px;
+                family: HelveticaNeue-Bold;
+                weight: bold;
+            }
+            text-align: center;
+            letter-spacing: 0.56px;
+            padding-right: 27px;
+
+        }
     }
 
     .show-cards{
         @include flex();
         flex-wrap: wrap;
         height: auto;
-        width: 80vw;
+        width: 1200px;
         background-color: green;
 
         .div {

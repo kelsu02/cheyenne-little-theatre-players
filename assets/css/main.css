@@ -141,25 +141,26 @@ p {
 
 .hero .hero-right p {
   text-align: right;
-  padding: 0;
+  padding-top: 5px;
 }
 
 .show-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
   height: 920px;
+  margin: 55px 120px 120px 120px;
 }
 
 .show-info ul {
@@ -176,6 +177,17 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: 28px;
+}
+
+.show-info ul li {
+  color: #000;
+  font-size: 23px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.56px;
+  padding-right: 27px;
 }
 
 .show-info .show-cards {
@@ -195,7 +207,7 @@ p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: auto;
-  width: 80vw;
+  width: 1200px;
   background-color: green;
 }
 
