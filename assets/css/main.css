@@ -49,7 +49,7 @@ table {
 }
 
 nav {
-  color: black;
+  color: #000;
   font-size: 19px;
   font-family: HelveticaNeue-Bold;
   font-weight: bold;
@@ -57,16 +57,91 @@ nav {
   letter-spacing: 0.47px;
 }
 
+h2 {
+  color: #FFF;
+  font-size: 88px;
+  font-family: HelveticaNowDisplay-XBlk;
+  font-weight: xblk;
+  text-align: left;
+  letter-spacing: 6.14px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  color: #FFF;
+  font-size: 28px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  letter-spacing: 1.95px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+  color: #FFF;
+  font-size: 34px;
+  font-family: HelveticaNowDisplay-XBlk;
+  font-weight: xblk;
+  letter-spacing: 2.37px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  color: #FFF;
+  font-size: 20px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+}
+
+.button {
+  width: 394px;
+  height: 93px;
+  background: rgba(0, 179, 44, 0.75);
+  border: 3px solid white;
+  border-radius: 3px;
+}
+
 .hero {
   width: 100vw;
   height: 820px;
+  background: url("/assets/imgs/winter-2896970.png") no-repeat;
+}
+
+.hero .hero-content {
+  margin-left: 48px;
+}
+
+.hero .hero-content h3 {
+  padding-top: 22px;
+}
+
+.hero .hero-content p {
+  padding-top: 26px;
+  line-height: 1.4;
+}
+
+.hero .hero-content .button {
+  line-height: 93px;
+  text-align: center;
+  margin-top: 58px;
 }
 
 .hero .hero-right {
   position: absolute;
   top: 599px;
   left: 853px;
-  background-color: blue;
+  margin-right: 29px;
+  width: 558px;
+}
+
+.hero .hero-right h4 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.hero .hero-right p {
+  text-align: right;
+  padding: 0;
 }
 
 .show-info {

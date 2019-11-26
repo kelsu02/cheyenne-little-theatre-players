@@ -3,12 +3,43 @@
 .hero {
     width: 100vw;
     height: 820px;
+    background: url('/assets/imgs/winter-2896970.png') no-repeat;
+
+    .hero-content {
+        margin-left: 48px;
+        
+        h3 {
+            padding-top: 22px;
+        }
+
+        p {
+            padding-top: 26px;
+            line-height: 1.4;
+        }
+
+        .button {
+            line-height: 93px;
+            text-align: center;
+            margin-top: 58px;
+        }
+    }
 
     .hero-right {
         position: absolute;
         top: 599px;
         left: 853px;
-        background-color: blue;
+        margin-right: 29px;
+        width: 558px;
+        
+        h4 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        p {
+            text-align: right;
+            padding: 0;
+        }
     }
 }
 

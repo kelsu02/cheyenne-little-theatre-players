@@ -1,7 +1,7 @@
 // TYPOGRAPHY
 
 nav {
-    color: rgb(0, 0, 0);
+    color: $dark;
     font: {
         size: 19px;
         family: HelveticaNeue-Bold;
@@ -9,4 +9,46 @@ nav {
     }
     text-align: center;
     letter-spacing: 0.47px;
+}
+
+h2 {
+    
+    color: $light;
+    font-size: 88px;
+    font-family: HelveticaNowDisplay-XBlk;
+    font-weight: xblk;
+    text-align: left;
+    letter-spacing: 6.14px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+h3 {
+    color: $light;
+    font: {
+        size: 28px;
+        family: HelveticaNeue-Bold;
+        weight: bold;
+    }
+    letter-spacing: 1.95px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+    color: $light;
+    font-size: 34px;
+    font-family: HelveticaNowDisplay-XBlk;
+    font-weight: xblk;
+    letter-spacing: 2.37px;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: $light;
+    font: {
+        size: 20px;
+        family: HelveticaNeue-Bold;
+        weight: bold;
+    }
+    letter-spacing: 1.6px;
 }
