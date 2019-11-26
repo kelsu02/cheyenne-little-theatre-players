@@ -3,20 +3,28 @@ nav {
     @include flex(space-between, center, row);
     height: 115px;
     width: 100vw;
-    background-color: grey;
 
     .nav-logo {
-        height: 50px;
-        width: 53px;
-        background-color: red;
+            img {
+                height: 72px;
+                width: 53px;
+                margin-left: 84px;
+            }
     }
 
     .tickets {
-        &::after {
-            content:"";
-            height: 50px;
-            width: 10px;
-            background-color: aqua;
+        @include flex();
+        width: 323px;
+        height: 115px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        
+        font-size: 25px;
+        font-family: HelveticaNowDisplay-XBlk;
+        font-weight: xblk;
+        letter-spacing: 0.61px;
+
+        span {
+            padding: 0px 10px;
         }
     }
 
@@ -24,18 +32,46 @@ nav {
         height: auto;
         width: auto;
         @include flex();
-        background-color: green;
+       
+        li {
+            padding: 0px 17px 0px 18px;
+        }
     }
 
     .icons {
         width: auto;
         @include flex();
+        
 
         div {
             height: 115px;
             width: auto;
             @include flex(center, center, column);
-            background: pink;
+            margin-right: 30px;
+
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 14px;
+            font-family: HelveticaNeue-Light;
+            font-weight: 300;
+            letter-spacing: 0.34px;
+
+            .location {
+                width: 22px;
+                height: auto;
+                padding-bottom: 10px;
+            }
+
+            .shopping-cart {
+                width: 35px;
+                height: auto;
+                padding-bottom: 10px;
+            }
+
+            &:nth-child(1) {
+                width: 94px;
+                height: 115px;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+            }
         }
     }
     

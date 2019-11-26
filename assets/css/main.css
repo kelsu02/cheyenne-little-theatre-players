@@ -48,6 +48,15 @@ table {
   border-spacing: 0;
 }
 
+nav {
+  color: black;
+  font-size: 19px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.47px;
+}
+
 .hero {
   width: 100vw;
   height: 820px;
@@ -130,6 +139,11 @@ table {
   height: 60px;
 }
 
+.fundraising {
+  width: 100vw;
+  height: 956px;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -146,20 +160,39 @@ nav {
           flex-direction: row;
   height: 115px;
   width: 100vw;
-  background-color: grey;
 }
 
-nav .nav-logo {
-  height: 50px;
+nav .nav-logo img {
+  height: 72px;
   width: 53px;
-  background-color: red;
+  margin-left: 84px;
 }
 
-nav .tickets::after {
-  content: "";
-  height: 50px;
-  width: 10px;
-  background-color: aqua;
+nav .tickets {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 323px;
+  height: 115px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 25px;
+  font-family: HelveticaNowDisplay-XBlk;
+  font-weight: xblk;
+  letter-spacing: 0.61px;
+}
+
+nav .tickets span {
+  padding: 0px 10px;
 }
 
 nav ul {
@@ -178,7 +211,10 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: green;
+}
+
+nav ul li {
+  padding: 0px 17px 0px 18px;
 }
 
 nav .icons {
@@ -214,7 +250,30 @@ nav .icons div {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: pink;
+  margin-right: 30px;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  font-family: HelveticaNeue-Light;
+  font-weight: 300;
+  letter-spacing: 0.34px;
+}
+
+nav .icons div .location {
+  width: 22px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+nav .icons div .shopping-cart {
+  width: 35px;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+nav .icons div:nth-child(1) {
+  width: 94px;
+  height: 115px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 footer {
