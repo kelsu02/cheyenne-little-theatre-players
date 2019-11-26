@@ -1,1 +1,48 @@
 // HOME
+
+.hero {
+    width: 100vw;
+    height: 820px;
+
+    .hero-right {
+        position: absolute;
+        top: 599px;
+        left: 853px;
+        background-color: blue;
+    }
+}
+
+.show-info {
+    @include flex(center, center, column);
+    width: 100vw;
+    height: 920px;
+
+    ul {
+        @include flex();
+    }
+
+    .show-cards{
+        @include flex();
+        flex-wrap: wrap;
+        height: auto;
+        width: 80vw;
+        background-color: green;
+
+        .div {
+            height: 400px;
+            width: 400px;
+
+            img {
+                height: 199px;
+                width: 400px;
+            }
+
+            .arrow {
+                width: 400px;
+                height: 60px;
+                
+            }
+        }
+    }
+    
+}

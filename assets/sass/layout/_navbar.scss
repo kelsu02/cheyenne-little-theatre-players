@@ -1,1 +1,42 @@
 // NAVBAR
+nav {
+    @include flex(space-between, center, row);
+    height: 115px;
+    width: 100vw;
+    background-color: grey;
+
+    .nav-logo {
+        height: 50px;
+        width: 53px;
+        background-color: red;
+    }
+
+    .tickets {
+        &::after {
+            content:"";
+            height: 50px;
+            width: 10px;
+            background-color: aqua;
+        }
+    }
+
+    ul {
+        height: auto;
+        width: auto;
+        @include flex();
+        background-color: green;
+    }
+
+    .icons {
+        width: auto;
+        @include flex();
+
+        div {
+            height: 115px;
+            width: auto;
+            @include flex(center, center, column);
+            background: pink;
+        }
+    }
+    
+}
