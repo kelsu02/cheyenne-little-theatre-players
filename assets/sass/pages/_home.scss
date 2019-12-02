@@ -16,12 +16,6 @@
             padding-top: 26px;
             line-height: 1.4;
         }
-
-        .button {
-            line-height: 93px;
-            text-align: center;
-            margin-top: 58px;
-        }
     }
 
     .hero-right {
@@ -68,24 +62,82 @@
     }
 
     .show-cards{
-        @include flex();
+        @include flex(space-around, center, row);
         flex-wrap: wrap;
         height: auto;
         width: 1200px;
-        background-color: green;
 
-        .div {
-            height: 400px;
+        div {
+            height: 399px;
             width: 400px;
-
+            position: relative;
+            
             img {
-                height: 199px;
+                height: $imgHeight;
                 width: 400px;
             }
 
+            h4 {
+                margin-top: 12px;
+                text-align: center;
+            }
+            
+            p {
+                margin-top: 18px;
+                text-align: center;
+            }
+
             .arrow {
+                @include flex();
+                position: absolute;
+                bottom: 0;
                 width: 400px;
                 height: 60px;
+            }
+        
+            &:nth-child(even) {
+                #xmas-carol {
+                    fill: $light;
+                }
+            
+            }
+            &:nth-child(odd) {
+                h4, p {
+                    color: $dark;
+                    text-shadow: none;
+                }
+                
+                #xmas-carol {
+                    fill: $dark;
+                }
+            }
+
+            &:nth-child(1) {
+                @include cardBackground ($xmasBg);
+            }
+
+            &:nth-child(2) {
+                @include cardBackground ($beautyBg);
+            }
+
+            &:nth-child(3) {
+                @include cardBackground ($windBg);
+
+                h4 {
+                    letter-spacing: 1.5px;
+                }
+            }
+
+            &:nth-child(4) {
+                @include cardBackground ($cabaretBg);
+            }
+
+            &:nth-child(5) {
+                @include cardBackground ($sunshineBg);
+            }
+
+            &:nth-child(6) {
+                @include cardBackground ($glassBg);
             }
         }
     }   
@@ -94,4 +146,25 @@
 .fundraising {
     width: 100vw;
     height: 956px;
+    background: url(/assets/imgs/donate.png);
+
+    h2 {
+        text-align: left;
+        letter-spacing: 7.47px;
+        font-size: 108px;
+        padding-top: 234px;
+        margin-left: 72px;
+
+    }
+    
+    h4 {
+        margin: 29px 0px 0px 72px;
+        width: 777px;
+        line-height: 57px;
+    }
+
+    .button {
+        background: none;
+        margin: 33px 0px 0px 72px;
+    }
 }

@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 
+.show-info .show-cards div:nth-child(1) .arrow, .show-info .show-cards div:nth-child(2) .arrow, .show-info .show-cards div:nth-child(3) .arrow, .show-info .show-cards div:nth-child(4) .arrow, .show-info .show-cards div:nth-child(5) .arrow, .show-info .show-cards div:nth-child(6) .arrow {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 nav {
   color: #000;
   font-size: 19px;
@@ -60,8 +64,9 @@ nav {
 h2 {
   color: #FFF;
   font-size: 88px;
-  font-family: HelveticaNowDisplay-XBlk;
-  font-weight: xblk;
+  font-family: neue-haas-grotesk-display,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   text-align: left;
   letter-spacing: 6.14px;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -79,8 +84,9 @@ h3 {
 h4 {
   color: #FFF;
   font-size: 34px;
-  font-family: HelveticaNowDisplay-XBlk;
-  font-weight: xblk;
+  font-family: neue-haas-grotesk-display,sans-serif;
+  font-weight: 700;
+  font-style: normal;
   letter-spacing: 2.37px;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -94,11 +100,29 @@ p {
 }
 
 .button {
+  color: #FFF;
+  font-size: 37px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  letter-spacing: 2.58px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.button {
   width: 394px;
   height: 93px;
   background: rgba(0, 179, 44, 0.75);
   border: 3px solid white;
   border-radius: 3px;
+  line-height: 93px;
+  margin-top: 58px;
+  -webkit-box-shadow: -3px 2px 0px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -3px 2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  overflow-x: hidden;
 }
 
 .hero {
@@ -118,12 +142,6 @@ p {
 .hero .hero-content p {
   padding-top: 26px;
   line-height: 1.4;
-}
-
-.hero .hero-content .button {
-  line-height: 93px;
-  text-align: center;
-  margin-top: 58px;
 }
 
 .hero .hero-right {
@@ -194,9 +212,8 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -208,27 +225,113 @@ p {
       flex-wrap: wrap;
   height: auto;
   width: 1200px;
-  background-color: green;
 }
 
-.show-info .show-cards .div {
-  height: 400px;
+.show-info .show-cards div {
+  height: 399px;
   width: 400px;
+  position: relative;
 }
 
-.show-info .show-cards .div img {
+.show-info .show-cards div img {
   height: 199px;
   width: 400px;
 }
 
-.show-info .show-cards .div .arrow {
+.show-info .show-cards div h4 {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.show-info .show-cards div p {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.show-info .show-cards div .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  bottom: 0;
   width: 400px;
   height: 60px;
+}
+
+.show-info .show-cards div:nth-child(even) #xmas-carol {
+  fill: #FFF;
+}
+
+.show-info .show-cards div:nth-child(odd) h4, .show-info .show-cards div:nth-child(odd) p {
+  color: #000;
+  text-shadow: none;
+}
+
+.show-info .show-cards div:nth-child(odd) #xmas-carol {
+  fill: #000;
+}
+
+.show-info .show-cards div:nth-child(1) {
+  background-color: #cae4eb;
+}
+
+.show-info .show-cards div:nth-child(2) {
+  background-color: #eb4a68;
+}
+
+.show-info .show-cards div:nth-child(3) {
+  background-color: #fdf2ea;
+}
+
+.show-info .show-cards div:nth-child(3) h4 {
+  letter-spacing: 1.5px;
+}
+
+.show-info .show-cards div:nth-child(4) {
+  background-color: #841206;
+}
+
+.show-info .show-cards div:nth-child(5) {
+  background-color: #f48307;
+}
+
+.show-info .show-cards div:nth-child(6) {
+  background-color: #9f9b99;
 }
 
 .fundraising {
   width: 100vw;
   height: 956px;
+  background: url(/assets/imgs/donate.png);
+}
+
+.fundraising h2 {
+  text-align: left;
+  letter-spacing: 7.47px;
+  font-size: 108px;
+  padding-top: 234px;
+  margin-left: 72px;
+}
+
+.fundraising h4 {
+  margin: 29px 0px 0px 72px;
+  width: 777px;
+  line-height: 57px;
+}
+
+.fundraising .button {
+  background: none;
+  margin: 33px 0px 0px 72px;
 }
 
 nav {
@@ -379,15 +482,25 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #6f0009;
+  color: #FFF;
+}
+
+footer, footer .footer {
+  font-size: 23px;
+  font-family: HelveticaNeue-Light;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1.6px;
 }
 
 footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -395,5 +508,6 @@ footer ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 1129px;
 }
 /*# sourceMappingURL=main.css.map */
