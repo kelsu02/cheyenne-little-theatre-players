@@ -4,8 +4,22 @@ footer {
     width: 100vw;
     height: 158px;
     @include flex(center, center, column);
+    background-color: $footerBg;
 
     ul {
-        @include flex();
+        @include flex(space-between);
+        width: 1129px;
+
+        li {
+            &:nth-child(2),
+            &:nth-child(3) {
+                &::before {
+                    content:"|";
+                    color: $light;
+                    padding-right: 8px;
+                }
+            }
+        }
+
     }
 }

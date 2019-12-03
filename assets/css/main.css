@@ -48,6 +48,10 @@ table {
   border-spacing: 0;
 }
 
+.show-info .show-cards div:nth-child(1) .arrow, .show-info .show-cards div:nth-child(2) .arrow, .show-info .show-cards div:nth-child(3) .arrow, .show-info .show-cards div:nth-child(4) .arrow, .show-info .show-cards div:nth-child(5) .arrow, .show-info .show-cards div:nth-child(6) .arrow {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 nav {
   color: #000;
   font-size: 19px;
@@ -60,10 +64,12 @@ nav {
 h2 {
   color: #FFF;
   font-size: 88px;
-  font-family: HelveticaNowDisplay-XBlk;
-  font-weight: xblk;
-  text-align: left;
+  font-family: neue-haas-grotesk-display,sans-serif;
+  font-weight: 900;
+  font-style: normal;
   letter-spacing: 6.14px;
+  line-height: normal;
+  text-align: left;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -73,15 +79,18 @@ h3 {
   font-family: HelveticaNeue-Bold;
   font-weight: bold;
   letter-spacing: 1.95px;
+  line-height: normal;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 h4 {
   color: #FFF;
   font-size: 34px;
-  font-family: HelveticaNowDisplay-XBlk;
-  font-weight: xblk;
+  font-family: neue-haas-grotesk-display,sans-serif;
+  font-weight: 900;
+  font-style: normal;
   letter-spacing: 2.37px;
+  line-height: normal;
   text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -94,11 +103,41 @@ p {
 }
 
 .button {
+  color: #FFF;
+  font-size: 37px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  letter-spacing: 2.58px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+footer {
+  color: #FFF;
+}
+
+footer, footer .footer {
+  font-size: 23px;
+  font-family: HelveticaNeue-Light;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1.6px;
+}
+
+.button {
   width: 394px;
   height: 93px;
   background: rgba(0, 179, 44, 0.75);
   border: 3px solid white;
   border-radius: 3px;
+  line-height: 93px;
+  margin-top: 58px;
+  -webkit-box-shadow: -3px 2px 0px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -3px 2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  overflow-x: hidden;
 }
 
 .hero {
@@ -120,12 +159,6 @@ p {
   line-height: 1.4;
 }
 
-.hero .hero-content .button {
-  line-height: 93px;
-  text-align: center;
-  margin-top: 58px;
-}
-
 .hero .hero-right {
   position: absolute;
   top: 599px;
@@ -136,30 +169,30 @@ p {
 
 .hero .hero-right h4 {
   text-align: center;
-  font-weight: bold;
 }
 
 .hero .hero-right p {
   text-align: right;
-  padding: 0;
+  padding-top: 5px;
 }
 
 .show-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
   height: 920px;
+  margin: 55px 120px 120px 120px;
 }
 
 .show-info ul {
@@ -176,9 +209,60 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-bottom: 28px;
+}
+
+.show-info ul li {
+  color: #000;
+  font-size: 23px;
+  font-family: HelveticaNeue-Bold;
+  font-weight: bold;
+  letter-spacing: 0.56px;
+  text-align: center;
+  padding-right: 27px;
 }
 
 .show-info .show-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: auto;
+  width: 1200px;
+}
+
+.show-info .show-cards div {
+  height: 399px;
+  width: 400px;
+  position: relative;
+}
+
+.show-info .show-cards div img {
+  height: 199px;
+  width: 400px;
+}
+
+.show-info .show-cards div h4 {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.show-info .show-cards div p {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.show-info .show-cards div .arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -192,31 +276,76 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: auto;
-  width: 80vw;
-  background-color: green;
-}
-
-.show-info .show-cards .div {
-  height: 400px;
-  width: 400px;
-}
-
-.show-info .show-cards .div img {
-  height: 199px;
-  width: 400px;
-}
-
-.show-info .show-cards .div .arrow {
+  position: absolute;
+  bottom: 0;
   width: 400px;
   height: 60px;
+}
+
+.show-info .show-cards div:nth-child(even) #xmas-carol {
+  fill: #FFF;
+}
+
+.show-info .show-cards div:nth-child(odd) h4, .show-info .show-cards div:nth-child(odd) p {
+  color: #000;
+  text-shadow: none;
+}
+
+.show-info .show-cards div:nth-child(odd) #xmas-carol {
+  fill: #000;
+}
+
+.show-info .show-cards div:nth-child(1) {
+  background-color: #cae4eb;
+}
+
+.show-info .show-cards div:nth-child(2) {
+  background-color: #eb4a68;
+}
+
+.show-info .show-cards div:nth-child(3) {
+  background-color: #fdf2ea;
+}
+
+.show-info .show-cards div:nth-child(3) h4 {
+  letter-spacing: 1.5px;
+}
+
+.show-info .show-cards div:nth-child(4) {
+  background-color: #841206;
+}
+
+.show-info .show-cards div:nth-child(5) {
+  background-color: #f48307;
+}
+
+.show-info .show-cards div:nth-child(6) {
+  background-color: #9f9b99;
 }
 
 .fundraising {
   width: 100vw;
   height: 956px;
+  background: url(/assets/imgs/donate.png);
+}
+
+.fundraising h2 {
+  text-align: left;
+  letter-spacing: 7.47px;
+  font-size: 108px;
+  padding-top: 234px;
+  margin-left: 72px;
+}
+
+.fundraising h4 {
+  margin: 29px 0px 0px 72px;
+  width: 777px;
+  line-height: 57px;
+}
+
+.fundraising .button {
+  background: none;
+  margin: 33px 0px 0px 72px;
 }
 
 nav {
@@ -235,6 +364,10 @@ nav {
           flex-direction: row;
   height: 115px;
   width: 100vw;
+}
+
+nav .nav-logo {
+  cursor: pointer;
 }
 
 nav .nav-logo img {
@@ -264,10 +397,21 @@ nav .tickets {
   font-family: HelveticaNowDisplay-XBlk;
   font-weight: xblk;
   letter-spacing: 0.61px;
+  cursor: pointer;
 }
 
 nav .tickets span {
   padding: 0px 10px;
+}
+
+nav .tickets span::after {
+  display: inline-block;
+  content: '';
+  background-image: url("/assets/imgs/down-arrow.svg");
+  background-size: 23px 14px;
+  width: 23px;
+  height: 14px;
+  margin-left: 14px;
 }
 
 nav ul {
@@ -290,6 +434,7 @@ nav ul {
 
 nav ul li {
   padding: 0px 17px 0px 18px;
+  cursor: pointer;
 }
 
 nav .icons {
@@ -331,6 +476,7 @@ nav .icons div {
   font-family: HelveticaNeue-Light;
   font-weight: 300;
   letter-spacing: 0.34px;
+  cursor: pointer;
 }
 
 nav .icons div .location {
@@ -367,15 +513,16 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: #6f0009;
 }
 
 footer ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -383,5 +530,12 @@ footer ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  width: 1129px;
+}
+
+footer ul li:nth-child(2)::before, footer ul li:nth-child(3)::before {
+  content: "|";
+  color: #FFF;
+  padding-right: 8px;
 }
 /*# sourceMappingURL=main.css.map */

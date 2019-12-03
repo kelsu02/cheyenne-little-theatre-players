@@ -6,3 +6,9 @@
     align-items: $ai;
     flex-direction: $fd;
 }
+
+@mixin cardBackground ($bgcolor) {
+    background-color: $bgcolor;
+
+    @extend %arrowBox
+}
