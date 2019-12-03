@@ -12,15 +12,19 @@ nav {
 }
 
 h2 {
-    
     color: $light;
-    font-size: 88px;
-    font-family: neue-haas-grotesk-display,sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    text-align: left;
+    font: {
+        size: 88px;
+        family: neue-haas-grotesk-display,sans-serif;
+        weight: 900;
+        style: normal;
+    }
     letter-spacing: 6.14px;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    line-height: normal;
+    text: {
+        align: left;
+        shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    }
 }
 
 
@@ -32,16 +36,20 @@ h3 {
         weight: bold;
     }
     letter-spacing: 1.95px;
+    line-height: normal;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 h4 {
     color: $light;
-    font-size: 34px;
-    font-family: neue-haas-grotesk-display,sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font: {
+        size: 34px;
+        family: neue-haas-grotesk-display,sans-serif;
+        weight: 900;
+        style: normal;
+    }
     letter-spacing: 2.37px;
+    line-height: normal;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -57,10 +65,28 @@ p {
 
 .button {
     color: $light;
-    font-size: 37px;
-    font-family: HelveticaNeue-Bold;
-    font-weight: bold;
+    font: {
+        size: 37px;
+        family: HelveticaNeue-Bold;
+        weight: bold;
+    }
     letter-spacing: 2.58px;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    text: {
+        shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+        align: center;
+    }
+}
+
+footer {
+    color: $light;
+    
+    &, .footer {
+        font: {
+            size: 23px;
+            family: HelveticaNeue-Light;
+            weight: 300;
+        }
+        text-align: center;
+        letter-spacing: 1.6px;
+    }
 }

@@ -5,18 +5,21 @@ footer {
     height: 158px;
     @include flex(center, center, column);
     background-color: $footerBg;
-    color: $light;
-    
-    &, .footer {
-        font-size: 23px;
-        font-family: HelveticaNeue-Light;
-        font-weight: 300;
-        text-align: center;
-        letter-spacing: 1.6px;
-    }
 
     ul {
         @include flex(space-between);
         width: 1129px;
+
+        li {
+            &:nth-child(2),
+            &:nth-child(3) {
+                &::before {
+                    content:"|";
+                    color: $light;
+                    padding-right: 8px;
+                }
+            }
+        }
+
     }
 }
