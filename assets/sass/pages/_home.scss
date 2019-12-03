@@ -53,10 +53,10 @@
                 family: HelveticaNeue-Bold;
                 weight: bold;
             }
+            
             letter-spacing: 0.56px;
             text-align: center;
             padding-right: 27px;
-
         }
     }
 
@@ -92,6 +92,7 @@
                 bottom: 0;
                 width: 400px;
                 height: 60px;
+                cursor: pointer;
             }
         
             &:nth-child(even) {

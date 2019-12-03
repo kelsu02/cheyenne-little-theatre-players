@@ -10,5 +10,10 @@
 @mixin cardBackground ($bgcolor) {
     background-color: $bgcolor;
 
-    @extend %arrowBox
+    @extend %arrowBox;
+}
+
+@mixin liHover ($marginLeft, $width) {
+    margin-left: $marginLeft;
+    width: $width;
 }

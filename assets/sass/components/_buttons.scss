@@ -9,4 +9,11 @@
     line-height: 93px;
     margin-top: 58px;
     box-shadow: -3px 2px 0px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+    &:hover {
+        span {
+            border-bottom: 3px solid $light;
+        }
+    }
 }
