@@ -435,22 +435,22 @@ nav ul li {
 }
 
 nav ul .two:hover ~ hr {
-  margin-left: 122px;
+  margin-left: 19%;
   width: 82px;
 }
 
 nav ul .three:hover ~ hr {
-  margin-left: 244px;
-  width: 88px;
+  margin-left: 38%;
+  width: 90px;
 }
 
 nav ul .four:hover ~ hr {
-  margin-left: 374px;
+  margin-left: 58%;
   width: 109px;
 }
 
 nav ul .five:hover ~ hr {
-  margin-left: 521px;
+  margin-left: 81%;
   width: 107px;
 }
 
@@ -461,6 +461,9 @@ nav ul hr {
   border: none;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
+}
+
+nav ul:hover hr {
   background: #000;
 }
 

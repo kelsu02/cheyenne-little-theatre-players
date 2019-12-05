@@ -55,27 +55,30 @@ nav {
         }
 
         .two:hover ~ hr {
-            @include liHover(122px, 82px);
+            @include liHover(19%, 82px);
         }
           
         .three:hover ~ hr {
-            @include liHover(244px, 88px);
+            @include liHover(38%, 90px);
         }
           
         .four:hover ~ hr {
-            @include liHover(374px, 109px);
+            @include liHover(58%, 109px);
         }
 
         .five:hover ~ hr {
-            @include liHover(521px, 107px);
+            @include liHover(81%, 107px);
         }
-          
+
         hr {
             height: .25rem;
             width: 65px;
             margin: 40px 0px 0px 18px;
             border: none;
             transition: .3s ease-in-out;
+        }
+          
+        &:hover hr {
             background: $dark;
         }
           
